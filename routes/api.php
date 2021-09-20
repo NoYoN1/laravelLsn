@@ -17,4 +17,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('bcontents/v1', 'Kad12_1Controller');
+Route::middleware('auth:api')->group(function () {
+    Route::apiResource('bcontents/v1', 'Kad12_1Controller');
+});

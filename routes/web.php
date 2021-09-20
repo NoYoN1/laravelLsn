@@ -31,3 +31,7 @@ Route::get('kad07_1', 'Kad07_1Controller@index');
 Route::resource('kad07_1', 'Kad07_1Controller');
 Route::get('kad11_1', 'Kad11_1Controller@index');
 Route::get('kad11_2', 'Kad11_1Controller@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
